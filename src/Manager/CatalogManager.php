@@ -20,10 +20,10 @@ class CatalogManager
     protected $request;
     protected $tp;
 
-    public function __construct(RequestStack $stack, EntityManagerInterface $em, FormFactoryInterface $factory, TableParser $tp) {
-        $this->request = $stack->getMasterRequest();
+    public function __construct(EntityManagerInterface $em, FormFactoryInterface $factory, RequestStack $stack, TableParser $tp) {
         $this->em = $em;
         $this->factory = $factory;
+        $this->request = $stack->getMasterRequest();
         $this->tp = $tp;
     }
 

@@ -12,6 +12,10 @@ use Symfony\Component\Form\FormView;
  */
 class Encoder
 {
+	public function encode(Form $form, array $errors = null) {
+		return Encoder::encodes($form, $errors);
+	}
+
 	public static function encodes(Form $form, array $errors = null)
 	{
 		if (!$errors) $errors = Encoder::getErrors($form->getName(), $form->getErrors(true, false));

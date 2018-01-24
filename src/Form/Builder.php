@@ -15,6 +15,20 @@ use Jochlain\API\Parser\FormParser;
  */
 class Builder
 {
+	protected $factory;
+
+	public function __construct(FormFactoryInterface $factory) {
+		$this->factory = $factory;
+	}
+
+	public function build(string $classname, $data = null, string $key = null, string $name = null, int $depth = 0) {
+		return Builder::builds($this->factory, $classname, $data, $key, $name, $depth);
+	}
+
+	public function view(string $classname, mixed $data = null, string $key = null, string $name = null, int $depth = 0) {
+		return Builder::views($this->factory, $classname, $data, $key, $name, $depth);
+	}
+
 	public static function builds(FormFactoryInterface $factory, string $classname, $data = null, string $key = null, string $name = null, int $depth = 0) {
 		$options = [ 'data_class' => $classname, 'name' => $name, 'key' => $key, 'depth' => $depth ];
         $builder = $factory->createBuilder(FormType::class, $data, $options);
