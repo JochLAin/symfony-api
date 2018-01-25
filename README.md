@@ -45,37 +45,37 @@ services:
 
     Jochlain\API\Manager\CatalogManager:
         arguments: 
-            - "@doctrine.orm.entity_manger"
+            - "@doctrine.orm.entity_manager"
             - "@form.factory"
             - "@request_stack"
             - "@Jochlain\\API\\Parser\\TableParser"
 
     Jochlain\API\Manager\CreateManager:
         arguments: 
-            - "@doctrine.orm.entity_manger"
+            - "@doctrine.orm.entity_manager"
             - "@form.factory"
             - "@request_stack"
 
     Jochlain\API\Manager\DeleteManager:
         arguments: 
-            - "@doctrine.orm.entity_manger"
+            - "@doctrine.orm.entity_manager"
             - "@form.factory"
             - "@request_stack"
 
     Jochlain\API\Manager\IndexManager:
         arguments: 
-            - "@doctrine.orm.entity_manger"
+            - "@doctrine.orm.entity_manager"
             - "@request_stack"
             - "@Jochlain\\API\\Manager\\CatalogManager"
 
     Jochlain\API\Manager\ReadManager:
         arguments: 
-            - "@doctrine.orm.entity_manger"
+            - "@doctrine.orm.entity_manager"
             - "@request_stack"
 
     Jochlain\API\Manager\UpdateManager:
         arguments: 
-            - "@doctrine.orm.entity_manger"
+            - "@doctrine.orm.entity_manager"
             - "@form.factory"
             - "@request_stack"
 
