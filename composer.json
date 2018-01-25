@@ -1,7 +1,7 @@
 {
     "name": "jochlain/api",
     "type": "symfony-bundle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Symfony API System based on annotation",
     "keywords": ["symfony", "api", "annotation"],
     "homepage": "http://jocelyn.faihy.fr",
@@ -12,7 +12,7 @@
     }],
     "require": {
         "php": "^7.0.8",
-        "jochlain/database": "^1.0.0",
+        "jochlain/database": "^1.0.4",
         "symfony/form": "^3.2||^4.0"
     },
     "autoload": { "psr-4": { "Jochlain\\API\\": "src/" }},
